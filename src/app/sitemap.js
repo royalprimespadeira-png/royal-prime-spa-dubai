@@ -2,6 +2,8 @@ import articles from "../data/blog";
 import seoData from "../data/seo";
 import serviceData from "../data/service";
 
+export const dynamic = "force-static";
+
 export default function sitemap() {
   const { siteUrl, pages } = seoData;
   if (!siteUrl) return [];
