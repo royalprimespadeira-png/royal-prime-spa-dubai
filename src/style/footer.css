@@ -1,0 +1,237 @@
+
+/* =====================================
+   ROYAL PRIME SPA - LUXURY FOOTER
+===================================== */
+
+.royal-footer {
+
+  background: var(--royal-black);
+  color: var(--royal-cream);
+  width: 100%;
+  border-top: 2px solid var(--royal-line-dark);
+}
+
+.royal-footer-container {
+  max-width: calc(var(--royal-content-width) + 2 * var(--royal-gutter));
+  margin: auto;
+  padding: clamp(46px, 6vw, 78px) var(--royal-gutter) 0;
+}
+
+.royal-footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, .75fr) minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: clamp(24px, 4vw, 55px);
+  padding-bottom: clamp(40px, 5vw, 64px);
+  overflow-wrap: anywhere;
+}
+
+/* BRAND */
+
+.royal-footer-logo {
+  display: block;
+  width: min(100%, 250px);
+}
+
+.royal-footer-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.royal-footer-tagline {
+  display: block;
+  margin-top: 9px;
+  color: var(--royal-gold-light);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.royal-footer-brand > p {
+  color: var(--royal-muted);
+  font-size: 13px;
+  line-height: 2;
+  margin: 25px 0;
+  max-width: 330px;
+}
+
+.royal-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.royal-footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 11px;
+  border: 1px solid var(--royal-line-dark);
+  color: var(--royal-gold-light);
+  font-size: 12px;
+  transition: background .25s, color .25s;
+}
+
+.royal-footer-socials a:hover {
+  background: var(--royal-gold-light);
+  color: var(--royal-black);
+}
+
+/* COLUMNS */
+
+.royal-footer-column h2 {
+  font-family: var(--royal-heading-family);
+  font-size: 25px;
+  font-weight: 600;
+  margin: 4px 0 14px;
+}
+
+.royal-footer-column h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 2px;
+  background: var(--royal-gold);
+  margin-top: 12px;
+}
+
+.royal-footer-column ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.royal-footer-column li a {
+  display: inline-block;
+  color: var(--royal-muted);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color .25s;
+}
+
+.royal-footer-column li a:hover {
+  color: var(--royal-gold-light);
+}
+
+/* CONTACT */
+
+.royal-footer-contact address {
+  font-style: normal;
+}
+
+.royal-footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  color: var(--royal-muted);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+  transition: color .25s;
+}
+
+.royal-footer-contact-item > svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--royal-gold);
+}
+
+.royal-footer-contact-item:hover {
+  color: var(--royal-gold-light);
+}
+
+.royal-footer-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 8px;
+  min-height: 44px;
+  padding: 10px 15px;
+  background: var(--royal-gradient);
+  color: var(--royal-black);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .25s;
+}
+
+.royal-footer-book-btn:hover {
+  background: var(--royal-gold-light);
+}
+
+/* BOTTOM */
+
+.royal-footer-bottom {
+  border-top: 1px solid var(--royal-line-dark);
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.royal-footer-bottom p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--royal-muted);
+}
+
+.royal-footer-bottom span {
+  color: var(--royal-gold);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .royal-footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .royal-footer-grid {
+    gap: 28px 20px;
+  }
+
+  .royal-footer-brand,
+  .royal-footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .royal-footer-brand > p {
+    margin: 16px 0 0;
+  }
+
+  .royal-footer-column h2 {
+    font-size: 20px;
+  }
+
+  .royal-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding: 25px 0;
+  }
+
+  .royal-footer-bottom p {
+    font-size: 11px;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .royal-footer a {
+    transition: none;
+  }
+}

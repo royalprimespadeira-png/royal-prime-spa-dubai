@@ -1,0 +1,505 @@
+
+/* =================================
+   ROYAL PRIME SPA - ABOUT PAGE
+================================= */
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+  background: var(--royal-paper);
+  color: var(--royal-ink);
+}
+
+.about-page * {
+  box-sizing: border-box;
+}
+
+.about-container {
+  max-width: calc(var(--royal-content-width) + 2 * var(--royal-gutter));
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--royal-gutter);
+}
+
+/* HERO */
+
+.about-hero {
+  height: 430px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--royal-black);
+}
+
+.about-hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #080808cc,
+    #08080880
+  );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.about-eyebrow,
+.about-section-label {
+  color: var(--royal-accent-ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.about-eyebrow,
+.about-philosophy .about-section-label {
+  color: var(--royal-gold-light);
+}
+
+.about-hero-content h1 {
+  font-family: var(--royal-heading-family);
+  font-size: clamp(38px, 5vw, 65px);
+  font-weight: 400;
+  margin: 18px 0;
+  line-height: 1.15;
+}
+
+.about-hero-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--royal-cream);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.about-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 25px;
+  font-size: 12px;
+  color: var(--royal-gold-light);
+}
+
+.about-breadcrumb a {
+  color: white;
+  text-decoration: none;
+}
+
+/* INTRODUCTION */
+
+.about-intro {
+  padding: 110px 0;
+  background: var(--royal-paper);
+}
+
+.home-about .about-intro {
+  padding: clamp(56px, 8vw, 108px) 0;
+  background: var(--royal-paper);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.about-image-wrap {
+  position: relative;
+  padding: 0 25px 25px 0;
+}
+
+.about-image-frame {
+  position: relative;
+  height: 510px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.about-cover-image {
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.about-image-frame:hover .about-cover-image,
+.about-experience-image:hover .about-cover-image {
+  transform: scale(1.045);
+}
+
+.about-image-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 25px 0 0 25px;
+  border: 2px solid var(--royal-gold-dark);
+  pointer-events: none;
+}
+
+.about-intro-content h2,
+.about-experience-content h2 {
+  font-family: var(--royal-heading-family);
+  font-size: clamp(32px, 3.3vw, 48px);
+  line-height: 1.2;
+  color: var(--royal-ink);
+  font-weight: 600;
+  margin: 18px 0 20px;
+}
+
+.about-gold-line {
+  width: 65px;
+  height: 2px;
+  background: var(--royal-gold);
+  margin-bottom: 25px;
+}
+
+.about-intro-content p,
+.about-experience-content p {
+  font-size: 14px;
+  line-height: 2;
+  color: var(--royal-ink-muted);
+  margin-bottom: 17px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 15px;
+  margin: 30px 0;
+}
+
+.about-highlight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: var(--royal-ink-muted);
+}
+
+.about-check {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: var(--royal-cream-deep);
+  color: var(--royal-accent-ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.about-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: var(--royal-gradient);
+  color: var(--royal-black);
+  text-decoration: none;
+  padding: 16px 25px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .5px;
+  transition: all .25s ease;
+}
+
+.about-primary-btn:hover {
+  background: var(--royal-gold-light);
+  transform: translateY(-3px);
+}
+
+/* PHILOSOPHY */
+
+.about-philosophy {
+  background: var(--royal-bronze);
+  color: var(--royal-cream);
+  padding: 100px 0 110px;
+}
+
+.about-section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 55px;
+}
+
+.about-heading-icon {
+  display: block;
+  color: var(--royal-gold);
+  margin: 18px auto;
+}
+
+.about-section-heading h2 {
+  font-family: var(--royal-heading-family);
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 400;
+  margin: 0 0 18px;
+}
+
+.about-section-heading p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--royal-muted);
+}
+
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.about-feature-card {
+  background: var(--royal-dark);
+  padding: 42px 23px 35px;
+  text-align: center;
+  border: 1px solid var(--royal-line-dark);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(45, 34, 15, .08);
+}
+
+.about-feature-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 23px;
+  border: 1px solid var(--royal-line-dark);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--royal-gold);
+}
+
+.about-feature-card h3 {
+  font-family: var(--royal-heading-family);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--royal-cream);
+  margin: 0 0 15px;
+}
+
+.about-feature-card p {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--royal-muted);
+  margin: 0;
+}
+
+.about-card-line {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background: var(--royal-gold);
+  margin: 25px auto 0;
+}
+
+/* EXPERIENCE */
+
+.about-experience {
+  padding: 110px 0;
+  background: var(--royal-cream);
+}
+
+.about-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.about-experience-content p {
+  margin-bottom: 32px;
+}
+
+.about-experience-image {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+/* CTA */
+
+.about-cta {
+  padding: 85px 0;
+  background: var(--royal-black);
+  text-align: center;
+  color: var(--royal-paper);
+}
+
+.about-cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-cta-content > svg {
+  color: var(--royal-gold);
+  margin-bottom: 20px;
+}
+
+.about-cta h2 {
+  font-family: var(--royal-heading-family);
+  font-size: clamp(30px, 4vw, 45px);
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.about-cta p {
+  color: var(--royal-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.about-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: var(--royal-gradient);
+  color: var(--royal-black);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background .25s;
+}
+
+.about-cta-btn:hover {
+  background: var(--royal-gold-light);
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .about-intro-grid,
+  .about-experience-grid {
+    gap: 45px;
+  }
+
+  .about-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-image-frame {
+    height: 450px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .about-hero {
+    height: 340px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .about-intro,
+  .about-experience {
+    padding: 70px 0;
+  }
+
+  .about-intro-grid,
+  .about-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-image-wrap {
+    max-width: 540px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .about-image-frame {
+    height: 430px;
+  }
+
+  .about-philosophy {
+    padding: 70px 0;
+  }
+
+  .about-experience-image {
+    height: 380px;
+  }
+
+  .about-cta {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0 18px;
+  }
+
+  .about-hero {
+    height: 300px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .about-hero-content p {
+    font-size: 12px;
+  }
+
+  .about-eyebrow,
+  .about-section-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .about-image-frame {
+    height: 340px;
+  }
+
+  .about-intro-content h2,
+  .about-experience-content h2 {
+    font-size: 32px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .about-features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .about-feature-card {
+    padding: 32px 22px;
+  }
+
+  .about-experience-image {
+    height: 300px;
+  }
+
+  .about-cta h2 {
+    font-size: 31px;
+  }
+}

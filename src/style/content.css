@@ -1,0 +1,192 @@
+.spa-content-page,
+.home-faq {
+  padding: clamp(48px, 7vw, 92px) var(--royal-gutter);
+  background: var(--royal-cream);
+  color: var(--royal-ink);
+}
+
+.spa-content-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.spa-content-heading {
+  margin-block: 0 30px;
+  max-width: 820px;
+}
+
+.spa-content-container > .spa-content-link + .spa-content-heading {
+  margin-top: 20px;
+}
+
+.spa-content-loading {
+  min-height: 18rem;
+  margin-top: 20px;
+  color: var(--royal-ink-muted);
+}
+
+.spa-content-heading h1,
+.spa-content-heading h2 {
+  font-family: var(--royal-heading-family);
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.spa-content-heading p {
+  margin-top: 13px;
+  color: var(--royal-ink-muted);
+  line-height: 1.7;
+}
+
+.spa-content-heading .spa-content-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+  color: var(--royal-accent-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.spa-content-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(24px, 5vw, 60px);
+}
+
+.spa-content-prose {
+  max-width: 760px;
+}
+
+.spa-content-prose h2,
+.spa-guide-card h2 {
+  margin-bottom: 10px;
+  font-size: clamp(25px, 3vw, 33px);
+  font-weight: 700;
+}
+
+.spa-content-prose h2:not(:first-child),
+.spa-content-prose section + section {
+  margin-top: 28px;
+}
+
+.spa-content-prose p,
+.spa-guide-card p,
+.home-faq-list p {
+  margin-bottom: 14px;
+  color: var(--royal-ink-muted);
+  line-height: 1.75;
+}
+
+.spa-content-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--royal-line);
+  background: var(--royal-cream-deep);
+}
+
+.spa-content-image img {
+  object-fit: cover;
+}
+
+.spa-content-button,
+.spa-content-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.spa-content-button {
+  margin-top: 10px;
+  padding: 12px 16px;
+  background: var(--royal-dark);
+  color: var(--royal-cream);
+}
+
+.spa-content-button:hover {
+  background: var(--royal-line-dark);
+}
+
+.spa-content-link,
+.spa-guide-treatment-list a,
+.home-faq-list a {
+  color: var(--royal-accent-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.spa-guide-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+  gap: 20px;
+}
+
+.spa-guide-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 1px solid var(--royal-line);
+  background: var(--royal-paper);
+}
+
+.spa-guide-card > .spa-content-link {
+  margin-top: auto;
+}
+
+.spa-guide-treatment-list {
+  display: grid;
+  gap: 10px;
+  padding: 0 0 12px 18px;
+  list-style: disc;
+}
+
+.home-faq-list {
+  border-top: 1px solid var(--royal-line);
+}
+
+.home-faq-list details {
+  border-bottom: 1px solid var(--royal-line);
+}
+
+.home-faq-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 0;
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.home-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.home-faq-list summary svg {
+  flex: none;
+  color: var(--royal-accent-ink);
+}
+
+.home-faq-list details[open] summary svg {
+  rotate: 180deg;
+}
+
+.home-faq-list p {
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 760px) {
+  .spa-content-columns {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,337 @@
+
+/* ROYAL PRIME SPA - THERAPISTS */
+
+.therapist-section {
+  --therapist-gold: #e99a09;
+  --therapist-gold-light: #f4c45d;
+
+  padding: 105px 20px;
+  background:
+    radial-gradient(
+      ellipse at top,
+      rgba(173, 115, 18, 0.08),
+      transparent 50%
+    ),
+    #080808;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+.therapist-section * {
+  box-sizing: border-box;
+}
+
+.therapist-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* HEADING */
+
+.therapist-heading {
+  max-width: 750px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.therapist-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  color: var(--therapist-gold-light);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+}
+
+.therapist-line {
+  width: 35px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d7a94e
+  );
+}
+
+.therapist-eyebrow .therapist-line:last-child {
+  transform: rotate(180deg);
+}
+
+.therapist-heading h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(35px, 4vw, 54px);
+  font-weight: 400;
+  margin: 18px 0;
+  color: #f5eee2;
+}
+
+.therapist-heading p {
+  color: #aaa59c;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* GRID */
+
+.therapist-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+
+.therapist-card {
+  background: #151410;
+  border: 1px solid #3b3121;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.therapist-card:hover {
+  transform: translateY(-8px);
+  border-color: #a87929;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* IMAGE */
+
+.therapist-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  background: #27221b;
+}
+
+.therapist-image {
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.7s ease;
+}
+
+.therapist-card:hover .therapist-image {
+  transform: scale(1.07);
+}
+
+.therapist-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(0, 0, 0, 0.65)
+  );
+  pointer-events: none;
+}
+
+.therapist-image-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(244, 196, 93, 0.35);
+  color: #f4c45d;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+}
+
+.therapist-image-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e99a09;
+  color: #080808;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.therapist-image-arrow:hover {
+  background: #f4c45d;
+}
+
+/* CARD CONTENT */
+
+.therapist-card-content {
+  padding: 27px 25px 25px;
+}
+
+.therapist-specialty {
+  color: #e9a72c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.therapist-card-content h3 {
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.therapist-experience {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #c2b8a7;
+  font-size: 12px;
+}
+
+.therapist-experience svg {
+  color: #e99a09;
+}
+
+.therapist-description {
+  margin: 20px 0 25px;
+  min-height: 72px;
+  color: #aaa59c;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.therapist-card-bottom {
+  padding-top: 20px;
+  border-top: 1px solid #3a3022;
+}
+
+.therapist-book-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px;
+  background: linear-gradient(
+    120deg,
+    #a66a08,
+    #e99a09,
+    #f4c45d
+  );
+  color: #080808;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 0.3s;
+}
+
+.therapist-book-btn:hover {
+  filter: brightness(1.12);
+}
+
+/* BOTTOM */
+
+.therapist-bottom {
+  margin-top: 55px;
+  text-align: center;
+}
+
+.therapist-bottom p {
+  color: #bdb6aa;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.therapist-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 25px;
+  color: #f4c45d;
+  border: 1px solid #ad7d2d;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.therapist-contact-btn:hover {
+  background: #e99a09;
+  color: #080808;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .therapist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .therapist-image-wrap {
+    height: 310px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .therapist-section {
+    padding: 70px 16px;
+  }
+
+  .therapist-heading {
+    margin-bottom: 35px;
+  }
+
+  .therapist-heading h2 {
+    font-size: 35px;
+  }
+
+  .therapist-heading p {
+    font-size: 13px;
+  }
+
+  .therapist-eyebrow {
+    font-size: 9px;
+    gap: 8px;
+  }
+
+  .therapist-line {
+    width: 20px;
+  }
+
+  .therapist-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .therapist-image-wrap {
+    height: 350px;
+  }
+
+  .therapist-card-content {
+    padding: 25px 20px;
+  }
+
+  .therapist-description {
+    min-height: auto;
+  }
+
+  .therapist-bottom {
+    margin-top: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .therapist-card,
+  .therapist-image {
+    transition: none;
+  }
+}

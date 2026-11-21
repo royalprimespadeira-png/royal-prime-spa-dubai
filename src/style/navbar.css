@@ -1,0 +1,250 @@
+
+.spa-header {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+
+.spa-topbar {
+  background: var(--royal-black);
+  color: var(--royal-cream);
+}
+
+.spa-top-inner {
+  max-width: calc(var(--royal-content-width) + 2 * var(--royal-gutter));
+  min-height: 80px;
+  margin: auto;
+  padding: 10px var(--royal-gutter);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.spa-socials {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.spa-socials a {
+  display: grid;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--royal-line-dark);
+  border-radius: 50%;
+}
+
+.spa-socials a,
+.spa-top-phone {
+  color: var(--royal-cream);
+  text-decoration: none;
+  transition: color .25s ease;
+}
+
+.spa-socials a:hover,
+.spa-top-phone:hover {
+  color: var(--royal-gold-light);
+}
+
+.spa-brand {
+  display: block;
+  width: 270px;
+  max-width: 100%;
+}
+
+.spa-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.spa-top-phone {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+}
+
+.spa-goldbar {
+  background: var(--royal-bronze);
+  border-bottom: 1px solid var(--royal-line-dark);
+}
+
+.spa-nav-inner {
+  max-width: calc(var(--royal-content-width) + 2 * var(--royal-gutter));
+  min-height: 48px;
+  margin: auto;
+  padding: 0 var(--royal-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.spa-navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.spa-navlink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 22px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--royal-cream);
+  text-decoration: none;
+  transition: background .25s ease, color .25s ease;
+}
+
+.spa-navlink:hover,
+.spa-navlink.active {
+  background: var(--royal-line-dark);
+  color: var(--royal-gold-light);
+}
+
+.spa-book-btn {
+  position: absolute;
+  right: var(--royal-gutter);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--royal-gradient);
+  color: var(--royal-black);
+  padding: 10px 16px;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 800;
+  transition: background .25s;
+}
+
+.spa-book-btn:hover {
+  background: var(--royal-gold-light);
+}
+
+.spa-menu-toggle,
+.spa-mobile-appointment,
+.spa-mobile-book {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .spa-navlink {
+    padding: 15px 12px;
+  }
+
+  .spa-book-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .spa-top-inner {
+    min-height: 66px;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    column-gap: 8px;
+  }
+
+  .spa-socials {
+    gap: 4px;
+  }
+
+  .spa-brand {
+    justify-self: center;
+    width: clamp(178px, 56vw, 216px);
+  }
+
+  .spa-top-phone {
+    min-width: 36px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .spa-top-phone span {
+    display: none;
+  }
+
+  .spa-top-phone svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .spa-nav-inner {
+    min-height: 48px;
+    justify-content: space-between;
+  }
+
+  .spa-mobile-appointment {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--royal-gold-light);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .spa-menu-toggle {
+    display: flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    color: var(--royal-cream);
+    cursor: pointer;
+  }
+
+  .spa-navlinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 16px 18px;
+    background: var(--royal-dark);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .28);
+  }
+
+  .spa-navlinks.open {
+    display: flex;
+  }
+
+  .spa-navlink {
+    padding: 15px 12px;
+    font-size: 14px;
+    color: var(--royal-cream);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .spa-navlink:hover,
+  .spa-navlink.active {
+    background: var(--royal-line-dark);
+    color: var(--royal-gold-light);
+  }
+
+  .spa-mobile-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin-top: 14px;
+    padding: 13px;
+    background: var(--royal-gradient);
+    color: var(--royal-black);
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 4px;
+  }
+}
