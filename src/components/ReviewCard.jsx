@@ -21,7 +21,7 @@ export default function ReviewCard({ review }) {
                 src={review.avatar}
                 alt=""
                 fill
-                sizes="42px"
+              sizes="(max-width: 640px) 48px, 42px"
                 className="review-avatar-img"
               />
             ) : (

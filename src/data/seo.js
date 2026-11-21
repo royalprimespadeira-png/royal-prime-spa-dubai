@@ -1,18 +1,18 @@
 import siteData from "./site";
 
-const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const metadataBase = configuredUrl ? new URL(configuredUrl) : undefined;
+const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || "https://www.royalprimespa.com";
+const metadataBase = new URL(configuredUrl);
 
-if (metadataBase && (
+if (
   !["https:", "http:"].includes(metadataBase.protocol) ||
   metadataBase.username || metadataBase.password ||
   metadataBase.pathname !== "/" || metadataBase.search || metadataBase.hash
-)) {
+) {
   throw new Error("NEXT_PUBLIC_SITE_URL must be an absolute website origin, such as https://example.com.");
 }
 
 const seoData = {
-  siteUrl: metadataBase?.origin,
+  siteUrl: metadataBase.origin,
   metadataBase,
   locale: "en_AE",
   image: {

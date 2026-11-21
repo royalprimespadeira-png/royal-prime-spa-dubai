@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowUpRight, Pause, Play } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Pause, Play } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 import ReviewCard from "./ReviewCard";
 import "../style/reviews.css";
@@ -29,6 +29,8 @@ function ReviewRow({ reviews, direction, moving }) {
 }
 
 export default function ReviewsSection({ data }) {
+  const cardsRef = useRef(null);
+  const [activeReview, setActiveReview] = useState(0);
   const [paused, setPaused] = useState(false);
   const { reviews, title, subtitle, description, googleReviewsUrl } = data;
   const canScroll = reviews.length >= 3;
@@ -36,6 +38,23 @@ export default function ReviewsSection({ data }) {
   const midpoint = reviews.length >= 6 ? Math.ceil(reviews.length / 2) : reviews.length;
 
   if (reviews.length === 0 && !googleReviewsUrl) return null;
+
+  function trackReview({ currentTarget }) {
+    const { clientWidth, scrollLeft, scrollWidth } = currentTarget;
+    if (scrollWidth <= clientWidth) return;
+
+    const gap = Number.parseFloat(getComputedStyle(currentTarget).columnGap);
+    const index = Math.round(scrollLeft / (clientWidth + gap));
+    setActiveReview(Math.max(0, Math.min(index, reviews.length - 1)));
+  }
+
+  function moveReview(offset) {
+    const container = cardsRef.current;
+    const cards = container.querySelectorAll(".reviews-group:not(.reviews-group-copy) .review-card");
+    const nextCard = cards[activeReview + offset];
+
+    if (nextCard) container.scrollTo({ left: nextCard.offsetLeft });
+  }
 
   return (
     <section className="reviews-section" aria-labelledby="reviews-title">
@@ -75,10 +94,39 @@ export default function ReviewsSection({ data }) {
           )}
         </div>
 
-        <div id="review-cards" className={`reviews-marquee-container${moving ? " is-moving" : ""}`}>
+        <div
+          id="review-cards"
+          ref={cardsRef}
+          className={`reviews-marquee-container${moving ? " is-moving" : ""}`}
+          onScroll={trackReview}
+        >
           <ReviewRow reviews={reviews.slice(0, midpoint)} direction="left" moving={moving} />
           <ReviewRow reviews={reviews.slice(midpoint)} direction="right" moving={moving} />
         </div>
+
+        {reviews.length > 1 && (
+          <div className="reviews-mobile-controls" role="group" aria-label="Browse reviews">
+            <button
+              type="button"
+              aria-label="Previous review"
+              aria-controls="review-cards"
+              disabled={activeReview === 0}
+              onClick={() => moveReview(-1)}
+            >
+              <ArrowLeft size={18} aria-hidden="true" />
+            </button>
+            <span aria-live="polite" aria-atomic="true">{activeReview + 1} of {reviews.length}</span>
+            <button
+              type="button"
+              aria-label="Next review"
+              aria-controls="review-cards"
+              disabled={activeReview === reviews.length - 1}
+              onClick={() => moveReview(1)}
+            >
+              <ArrowRight size={18} aria-hidden="true" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
