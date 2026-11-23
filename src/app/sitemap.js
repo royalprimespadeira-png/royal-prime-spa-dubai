@@ -3,7 +3,6 @@ import seoData from "../data/seo";
 import serviceData from "../data/service";
 
 export const dynamic = "force-static";
-
 export default function sitemap() {
   const { siteUrl, pages } = seoData;
   if (!siteUrl) return [];
@@ -14,8 +13,5 @@ export default function sitemap() {
     ...articles.map(({ slug }) => `/blog/${slug}`),
   ];
 
-  // Match the trailing slashes used by the static export.
-  return paths.map((path) => ({
-    url: new URL(path.endsWith("/") ? path : `${path}/`, siteUrl).href,
-  }));
+  return paths.map((path) => ({ url: new URL(path, siteUrl).href }));
 }

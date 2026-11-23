@@ -2,8 +2,8 @@ import siteData from "./site";
 
 const serviceData = {
   heading: {
-    label: "LUXURY SPA & WELLNESS IN DUBAI",
-    title: "Massage & Spa Treatments in Dubai",
+    label: "LUXURY SPA & WELLNESS IN Deira",
+    title: "Massage & Spa Treatments in Deira",
     description:
       "Explore nine treatments at Royal Prime Spa in Deira, from full-body relaxation massage and traditional Thai stretching to Moroccan hammam.",
     background: "/images/services/spa-hero.webp",
@@ -11,8 +11,8 @@ const serviceData = {
   services: [
     {
       id: "moroccan-royal-hammam",
-      title: "Traditional Moroccan Royal Hammam",
-      seoTitle: "Moroccan Hammam in Deira, Dubai",
+      title: " Female to Male",
+      seoTitle: " male to female in Deira, Deira",
       description:
         "A traditional Moroccan bathing ritual combines warm steam with a full-body exfoliation.",
       details: [
@@ -24,8 +24,8 @@ const serviceData = {
     },
     {
       id: "four-hand-massage",
-      title: "Four-Hand Synchronised Massage",
-      seoTitle: "Four-Hand Massage in Dubai",
+      title: "Four Hand Massage",
+      seoTitle: "Four-Hand Massage in Deira",
       description:
         "Two therapists work in sync, using coordinated strokes in a full-body massage.",
       details: [
@@ -36,22 +36,22 @@ const serviceData = {
       imageAlt: "Two massage tables in a softly lit treatment suite",
     },
     {
-      id: "hot-stone-massage",
-      title: "Hot Stone & Volcanic Basalt Massage",
-      seoTitle: "Hot Stone Massage in Dubai",
+      id: "hot-oil-massage",
+      title: "Hot Oil Massage",
+      seoTitle: "Hot Oil Massage in Deira",
       description:
-        "Smooth, warmed volcanic basalt stones add gentle heat to a relaxing massage.",
+        "Warm oil is applied to the body and then massaged in, providing deep hydration and relaxation.",
       details: [
-        "The therapist combines warmed stones with slow massage strokes. The stones retain warmth, giving the session a steady, unhurried feel.",
-        "Mention your preferred warmth before the session and let the therapist know if the stones feel too hot. If you prefer a similar pace without added heat, ask about Swedish massage.",
+        "The therapist combines warmed oil with slow massage strokes. The oil retains warmth, giving the session a steady, unhurried feel.",
+        "Mention your preferred warmth before the session and let the therapist know if the oil feels too hot. If you prefer a similar pace without added heat, ask about Swedish massage.",
       ],
-      image: "/images/services/hot-stone-massage.webp",
-      imageAlt: "Smooth basalt stones arranged on a folded towel",
+      image: "/images/therapist/2.png",
+      imageAlt: "Warm oil being applied during a massage session",
     },
     {
       id: "aromatherapy-massage",
-      title: "Traditional Balinese Aromatherapy Massage",
-      seoTitle: "Balinese Aromatherapy Massage in Dubai",
+      title: " Aromatherapy Massage",
+      seoTitle: "Balinese Aromatherapy Massage in Deira",
       description:
         "Balinese massage pairs rhythmic strokes and kneading with fragrant oils.",
       details: [
@@ -63,8 +63,8 @@ const serviceData = {
     },
     {
       id: "thai-massage",
-      title: "Traditional Thai Deep-Stretching Massage",
-      seoTitle: "Traditional Thai Massage in Dubai",
+      title: " Thai Massage",
+      seoTitle: "Traditional Thai Massage in Deira",
       description:
         "Traditional Thai massage combines guided stretches and rhythmic pressure in a movement-focused session.",
       details: [
@@ -76,8 +76,8 @@ const serviceData = {
     },
     {
       id: "deep-tissue-massage",
-      title: "Deep Tissue Lymphatic Drainage Massage",
-      seoTitle: "Deep Tissue Massage in Dubai",
+      title: "Deep Tissue  Massage",
+      seoTitle: "Deep Tissue Massage in Deira",
       description:
         "This session pairs targeted deep tissue pressure with lighter, rhythmic lymphatic massage strokes.",
       details: [
@@ -89,8 +89,8 @@ const serviceData = {
     },
     {
       id: "swedish-massage",
-      title: "Swedish Therapeutic Massage",
-      seoTitle: "Swedish Massage in Dubai",
+      title: "Swedish  Massage",
+      seoTitle: "Swedish Massage in Deira",
       description:
         "Gentle pressure and long, flowing strokes offer a calming full-body massage.",
       details: [
@@ -101,9 +101,9 @@ const serviceData = {
       imageAlt: "Therapist applying a palm stroke during a massage",
     },
     {
-      id: "lomi-lomi-massage",
-      title: "Lomi Lomi Hawaiian Massage",
-      seoTitle: "Lomi Lomi Massage in Dubai",
+      id: "Jacuzzi-Massage",
+      title: "Jacuzzi Massage",
+      seoTitle: "Jacuzzi Massage in Deira",
       description:
         "Long, flowing strokes using the hands and forearms are characteristic of this Hawaiian massage.",
       details: [
@@ -114,11 +114,11 @@ const serviceData = {
       imageAlt: "Therapist applying a palm stroke during a massage",
     },
     {
-      id: "shiatsu-massage",
-      title: "Shiatsu Acupressure Massage",
-      seoTitle: "Shiatsu Acupressure Massage in Dubai",
+      id: "full-body-massage",
+      title: "Full-Body Massage",
+      seoTitle: "Full-Body Massage in Deira",
       description:
-        "This Japanese massage uses steady pressure from the fingers and palms at specific points on the body.",
+        "A comprehensive massage covering the entire body for complete relaxation and rejuvenation  .",
       details: [
         "During Shiatsu, the therapist applies steady pressure, releases it and moves on to the next point. The treatment has a measured pace with short pauses between areas.",
         "Ask what to wear and tell your therapist if you prefer lighter pressure or want them to avoid a particular area.",

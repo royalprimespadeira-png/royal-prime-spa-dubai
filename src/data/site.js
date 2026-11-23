@@ -57,7 +57,7 @@ const siteData = {
     {
       id: 1,
       image: "/images/heroimages/10.webp",
-      title: "Best Spa in Deira Dubai ",
+      title: "Best Spa in Deira  ",
       subtitle:
         "Unwind in Al Muraqqabat, Deira, with a Moroccan hammam, a full-body Swedish massage or a treatment chosen for your preferred pressure and pace.",
     },
@@ -71,7 +71,7 @@ const siteData = {
     {
       id: 3,
       image: "/images/heroimages/9.webp",
-      title: "Relaxation & Wellness in Dubai",
+      title: "No 1 Spa in Deira",
       subtitle:
         "Explore our gallery of treatment suites, relaxation spaces and spa details.",
     },
