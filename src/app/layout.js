@@ -382,6 +382,32 @@ export default function RootLayout({ children }) {
 
         {/* Special Spa Offer Popup */}
         <OfferPopup data={siteData} />
+
+
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5SMHXKVX">   </script>
+       <script>{` window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); `}
+         </script>
+{/* 
+        <!-- Event snippet for Call Now conversion page --> */}
+<script>
+  {`
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18593654747/yTUmCJCSlb8dENvPkqJF',
+      'value': 1.0,
+      'currency': 'INR'
+  });
+  `}
+</script>
+{/* 
+<!-- Event snippet for WA Now conversion page --> */}
+<script>
+  {`
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18593654747/cxprCPiglb8dENvPkqJF',
+      'value': 1.0,
+      'currency': 'INR'
+  });`}
+</script>
       </body>
     </html>
   );
